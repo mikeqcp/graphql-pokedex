@@ -1,0 +1,20 @@
+{
+
+  "README_schema" : "Specifies how to load the GraphQL schema that completion, error highlighting, and documentation is based on in the IDE",
+  "schema": {
+    "file": "./backend/graphql-pokemon/schemas/schema.json"
+  },
+
+  "endpoints" : [
+    {
+      "name": "Default (http://localhost:5000)",
+      "url": "http://localhost:8080/graphql",
+      "options" : {
+        "headers": {
+          "user-agent" : "JS GraphQL"
+        }
+      }
+    }
+  ]
+
+}

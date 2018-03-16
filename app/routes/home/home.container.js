@@ -10,16 +10,19 @@ import { MaintainersActions } from '../../modules/maintainers/maintainers.redux'
 import { selectMaintainersItems } from '../../modules/maintainers/maintainers.selectors';
 import { LocalesActions } from '../../modules/locales/locales.redux';
 import { selectLocalesLanguage } from '../../modules/locales/locales.selectors';
+import { PokemonActions, selectPokemonData } from '../../modules/pokemon';
 
 
 const mapStateToProps = createStructuredSelector({
   items: selectMaintainersItems,
   language: selectLocalesLanguage,
+  pokemon: selectPokemonData
 });
 
 export const mapDispatchToProps = (dispatch) => bindActionCreators({
   fetchMaintainers: MaintainersActions.fetch,
   setLanguage: LocalesActions.setLanguage,
+  fetchPokemon: PokemonActions.fetch
 }, dispatch);
 
 export default compose(
